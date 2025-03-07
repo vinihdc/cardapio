@@ -4,8 +4,8 @@ function mostrarPopup(titulo, receita) {
     document.getElementById('popup').style.display = 'flex';
 }
 
-document.getElementById('popup').addEventListener('click', function(event) {
-    if (event.target === this) { 
+document.getElementById('popup').addEventListener('click', function (event) {
+    if (event.target === this) {
         esconderPopup();
     }
 });
@@ -28,10 +28,10 @@ next.onclick = () => {
     list[active].classList.add('active');
 }
 
-prev.onclick = () => { 
+prev.onclick = () => {
     let activeinicial = document.querySelector('.active');
     activeinicial.classList.remove('active');
 
-    active = active <= 0 ? count -1 : active - 1;
+    active = active <= 0 ? count - 1 : active - 1;
     list[active].classList.add('active');
 }
