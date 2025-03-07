@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Cardápio</title>
 </head>
+
 <body>
     <main>
         <div class="item" style="--background: #2d5643;">
-            <div class="titulo">
-                Abacate
-            </div>
-            <img src="Img/abacate_drink.png" alt="abacate_drink" class="drink">
-            <img src="Img/abacate.png" alt="abacate_fruta" class="fruta"> 
+            <div class="titulo">Abacate</div>
+            <img src="Img/abacate_drink.png" alt="abacate_drink" class="drink" onclick="mostrarPopup('Abacate', 'Misture abacate, leite, açúcar e gelo no liquidificador.')">
+            <img src="Img/abacate.png" alt="abacate_fruta" class="fruta">
         </div>
-        
+
         <div class="item active" style="--background: #ea3d41;">
-            <div class="titulo">
-                Morango
-            </div>
-            <img src="Img/morango_drink.png" alt="morango_drink" class="drink">
-            <img src="Img/morango.png" alt="morango" class="fruta"> 
+            <div class="titulo">Morango</div>
+            <img src="Img/morango_drink.png" alt="morango_drink" class="drink" onclick="mostrarPopup('Morango', 'Bata morangos, leite condensado e gelo até ficar cremoso.')">
+            <img src="Img/morango.png" alt="morango" class="fruta">
         </div>
 
         <div class="item hidden" style="--background: #e7a043;">
-            <div class="titulo">
-                Laranja
-            </div>
-            <img src="Img/laranja_drink.png" alt="laranja_drink" class="drink">
-            <img src="Img/laranja.png" alt="laranja" class="fruta"> 
+            <div class="titulo">Laranja</div>
+            <img src="Img/laranja_drink.png" alt="laranja_drink" class="drink" onclick="mostrarPopup('Laranja', 'Esprema laranjas frescas e adicione gelo e açúcar a gosto.')">
+            <img src="Img/laranja.png" alt="laranja" class="fruta">
         </div>
 
         <div class="seta">
             <button id="ant"> < </button>
             <button id="prox"> > </button>
-            
-            </div>
+        </div>
     </main>
+
+    <div id="popup" class="popup">
+        <div class="contPopup">
+            <span class="fechar" onclick="esconderPopup()">&times;</span>
+            <h2 id="popup-titulo"></h2>
+            <p id="popup-texto"></p>
+        </div>
+    </div>
 </body>
 <script src="script.js"></script>
+
 </html>
